@@ -150,8 +150,8 @@ export default function ProjectsPage() {
                                     key={category}
                                     onClick={() => setActiveCategory(category)}
                                     className={`px-6 py-2 cursor-pointer rounded-full text-sm font-normal transition-colors duration-300 ease-out ${activeCategory === category
-                                            ? "bg-white text-gray-900 ring-1 ring-gray-200"
-                                            : "text-gray-600 hover:text-gray-900 hover:bg-white/70"
+                                        ? "bg-white text-gray-900 ring-1 ring-gray-200"
+                                        : "text-gray-600 hover:text-gray-900 hover:bg-white/70"
                                         }`}
                                 >
                                     {category}
@@ -172,31 +172,6 @@ export default function ProjectsPage() {
                     </div>
 
 
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="py-24 px-5 bg-gray-50">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
-                        Ready to Start Your
-                        <em className="italic font-light ml-4" style={{ fontFamily: playfair.style.fontFamily }}>
-                            Project?
-                        </em>
-                    </h2>
-                    <p className="lg:text-lg text-base text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Let's collaborate to bring your vision to life with our creative expertise
-                        and technical excellence.
-                    </p>
-                    <Link
-                        href="/#contact"
-                        className="inline-flex items-center px-6 py-4 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-all duration-300 transform hover:scale-105"
-                    >
-                        <span className="mr-3 text-sm">Start a Conversation</span>
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </Link>
                 </div>
             </section>
         </div>
