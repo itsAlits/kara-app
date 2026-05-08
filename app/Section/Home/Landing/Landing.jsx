@@ -127,11 +127,10 @@ export default function Landing() {
           {/* stars + label */}
           <div className="flex flex-col items-center sm:items-start gap-0.5">
             <div className="flex items-center gap-0.5">
-              {[1, 2, 3, 4].map((i) => <Star key={i} filled />)}
-              <Star filled={false} />
+              {[1, 2, 3, 4, 5].map((i) => <Star key={i} filled />)}
             </div>
             <p className="text-xs text-gray-500 mt-3 lg:mt-1">
-              Trusted by <span className="font-semibold text-gray-800">200+</span> happy clients
+              Trusted by <span className="font-semibold text-gray-800">Big Brands</span> in Bali
             </p>
           </div>
         </div>

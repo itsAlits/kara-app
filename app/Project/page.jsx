@@ -43,7 +43,7 @@ const projects = [
     {
         id: "04",
         title: "E-Commerce Store",
-        category: "Website",
+        category: "Ads",
         desc: "Full Shopify storefront with custom theme.",
         image: "https://cdn.dribbble.com/userupload/44189133/file/original-cec53795eb9330008a098744063f7be2.png?resize=1024x768&vertical=center",
         year: "2024",
@@ -51,7 +51,7 @@ const projects = [
     },
 ];
 
-const categories = ["All", "Photography", "Website"];
+const categories = ["All", "Photography", "Website", "Ads"];
 
 function ProjectCard({ project, index }) {
     return (
@@ -142,8 +142,37 @@ export default function ProjectsPage() {
             {/* Filter Section */}
             <section className="py-16 px-5">
                 <div className="max-w-7xl mx-auto">
-                    {/* Filter Buttons */}
-                    <div className="flex justify-center mb-16">
+
+                    {/* Mobile Filter: Horizontally scrollable chips */}
+                    <div className="flex md:hidden overflow-x-auto gap-2 mb-10 pb-1 -mx-5 px-5 scrollbar-hide">
+                        {categories.map((category) => {
+                            const count = category === "All"
+                                ? projects.length
+                                : projects.filter(p => p.category === category).length;
+                            const isActive = activeCategory === category;
+                            return (
+                                <button
+                                    key={category}
+                                    onClick={() => setActiveCategory(category)}
+                                    className={`flex-shrink-0 cursor-pointer inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${isActive
+                                        ? "bg-gray-900 text-white border-gray-900 shadow-md"
+                                        : "bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900"
+                                        }`}
+                                >
+                                    {category}
+                                    <span className={`text-xs px-1.5 py-0.5 rounded-full font-mono leading-none ${isActive
+                                        ? "bg-white/20 text-white"
+                                        : "bg-gray-100 text-gray-500"
+                                        }`}>
+                                        {count}
+                                    </span>
+                                </button>
+                            );
+                        })}
+                    </div>
+
+                    {/* Desktop Filter: Pill group (original style) */}
+                    <div className="hidden md:flex justify-center mb-16">
                         <div className="flex space-x-1 bg-gray-50 border border-gray-100 p-1 rounded-full">
                             {categories.map((category) => (
                                 <button

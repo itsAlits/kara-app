@@ -4,10 +4,13 @@
   themes: light --default;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     font-family: var(--font-poppins), sans-serif;
-    scroll-behavior: smooth;
   }
 }
 
@@ -15,5 +18,13 @@
   @keyframes marquee {
     from { transform: translateX(0); }
     to   { transform: translateX(calc(-100% / 3)); }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

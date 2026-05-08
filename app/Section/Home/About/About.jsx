@@ -47,6 +47,7 @@ export default function About() {
                         <Image
                             src="/Oke.svg"
                             alt="Rushing creative work"
+                            className="w-72 lg:w-117.5"
                             width={470}
                             height={400}
                         

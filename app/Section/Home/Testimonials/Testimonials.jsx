@@ -26,7 +26,7 @@ export default function Testimonials() {
               We partnered on a premium digital experience built to reflect the brand’s values. Every design choice was intentional and aligned with business goals.
             </p>
             <div className="lg:absolute mt-4 text-xs bottom-10 lg:text-sm text-slate-400">
-              Sarah Mitchell • Founder, Chipboard
+              Tole • Founder of Sumiartha Furniture
             </div>
 
           </article>
@@ -55,7 +55,7 @@ export default function Testimonials() {
                 The process was seamless, thoughtful, and focused on delivering a refined brand experience.
               </p>
               <div className="mt-6 text-xs lg:text-sm text-gray-500">
-                Sarah Mitchell — Marketing Head at TalentConnect
+                Dida • Head Legal of Ubud Law Office
               </div>
             </article>
           </div>
@@ -67,7 +67,7 @@ export default function Testimonials() {
               Customer story
             </p>
             <h3 className="text-xl font-normal text-slate-900 leading-tight mb-4">
-              Kara Design Agency brought our ideas to life with elegant clarity.”
+              Kara Creative Agency brought our ideas to life with elegant clarity.”
             </h3>
             <p className=" text-xs lg:text-sm leading-relaxed text-gray-600">
               The work delivered was polished, strategic, and built to scale across every touchpoint.
