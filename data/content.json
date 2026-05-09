@@ -164,8 +164,48 @@
       }
     ]
   },
+  "blogs": [
+    {
+      "slug": "the-art-of-visual-storytelling",
+      "title": "The Art of Visual Storytelling in Brand Photography",
+      "category": "Branding",
+      "author": "Kara Studio",
+      "excerpt": "Great brand photography isn't just about taking sharp photos — it's about crafting a visual language that speaks before words do.",
+      "content": "<p>Every&nbsp;brand&nbsp;has&nbsp;a&nbsp;story.&nbsp;The&nbsp;challenge&nbsp;is&nbsp;translating&nbsp;that&nbsp;story&nbsp;into&nbsp;a&nbsp;single&nbsp;frame&nbsp;that&nbsp;stops&nbsp;someone&nbsp;mid-scroll&nbsp;and&nbsp;makes&nbsp;them&nbsp;feel&nbsp;something.</p><h2>Why&nbsp;Visuals&nbsp;Come&nbsp;First</h2><p>Humans&nbsp;process&nbsp;images&nbsp;60,000x&nbsp;faster&nbsp;than&nbsp;text.&nbsp;Before&nbsp;your&nbsp;potential&nbsp;client&nbsp;reads&nbsp;your&nbsp;tagline,&nbsp;they&#39;ve&nbsp;already&nbsp;formed&nbsp;an&nbsp;emotional&nbsp;impression&nbsp;from&nbsp;your&nbsp;imagery.&nbsp;That&nbsp;impression&nbsp;is&nbsp;your&nbsp;brand.</p><h2>The&nbsp;Three&nbsp;Pillars</h2><p><strong>Light</strong>&nbsp;—&nbsp;Natural&nbsp;light&nbsp;creates&nbsp;trust.&nbsp;Hard&nbsp;flash&nbsp;creates&nbsp;distance.&nbsp;Understanding&nbsp;light&nbsp;is&nbsp;understanding&nbsp;mood.</p><p><strong>Composition</strong>&nbsp;—&nbsp;Where&nbsp;you&nbsp;place&nbsp;your&nbsp;subject&nbsp;tells&nbsp;a&nbsp;story.&nbsp;Center&nbsp;=&nbsp;authority.&nbsp;Off-center&nbsp;=&nbsp;personality.&nbsp;Negative&nbsp;space&nbsp;=&nbsp;confidence.</p><p><strong>Colour&nbsp;grading</strong>&nbsp;—&nbsp;Your&nbsp;palette&nbsp;should&nbsp;match&nbsp;your&nbsp;brand&nbsp;values.&nbsp;Warm&nbsp;tones&nbsp;feel&nbsp;approachable.&nbsp;Cool&nbsp;tones&nbsp;feel&nbsp;premium.&nbsp;Desaturated&nbsp;tones&nbsp;feel&nbsp;editorial.</p><h2>Start&nbsp;With&nbsp;the&nbsp;Story</h2><p>Before&nbsp;picking&nbsp;up&nbsp;the&nbsp;camera,&nbsp;ask:&nbsp;what&nbsp;feeling&nbsp;should&nbsp;this&nbsp;image&nbsp;leave?&nbsp;Work&nbsp;backwards&nbsp;from&nbsp;that&nbsp;emotion&nbsp;to&nbsp;every&nbsp;technical&nbsp;decision.</p>",
+      "coverImage": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200&q=80",
+      "publishedAt": "2026-05-01T00:00:00.000Z",
+      "published": true,
+      "tags": [
+        "photography",
+        "branding",
+        "visual"
+      ],
+      "readTime": "4",
+      "metaTitle": "",
+      "metaDesc": ""
+    },
+    {
+      "slug": "designing-websites-that-convert",
+      "title": "Designing Websites That Actually Convert",
+      "category": "Website",
+      "author": "Kara Studio",
+      "excerpt": "A beautiful website that doesn't convert is just expensive digital art. Here's how we bridge the gap between aesthetics and results.",
+      "content": "<p>We&#39;ve&nbsp;all&nbsp;seen&nbsp;it&nbsp;—&nbsp;a&nbsp;visually&nbsp;stunning&nbsp;website&nbsp;with&nbsp;a&nbsp;4%&nbsp;conversion&nbsp;rate.&nbsp;The&nbsp;design&nbsp;wins&nbsp;awards.&nbsp;The&nbsp;business&nbsp;loses&nbsp;clients.&nbsp;Here&#39;s&nbsp;what&nbsp;separates&nbsp;beautiful&nbsp;from&nbsp;effective.</p><h2>Hierarchy&nbsp;is&nbsp;Everything</h2><p>Your&nbsp;visitor&#39;s&nbsp;eye&nbsp;needs&nbsp;a&nbsp;guided&nbsp;path.&nbsp;Hero&nbsp;→&nbsp;Value&nbsp;prop&nbsp;→&nbsp;Social&nbsp;proof&nbsp;→&nbsp;CTA.&nbsp;Every&nbsp;element&nbsp;should&nbsp;point&nbsp;toward&nbsp;the&nbsp;next&nbsp;step,&nbsp;not&nbsp;compete&nbsp;for&nbsp;attention.</p><h2>Speed&nbsp;is&nbsp;UX</h2><p>A&nbsp;1-second&nbsp;delay&nbsp;in&nbsp;page&nbsp;load&nbsp;reduces&nbsp;conversions&nbsp;by&nbsp;7%.&nbsp;Performance&nbsp;isn&#39;t&nbsp;a&nbsp;technical&nbsp;afterthought&nbsp;—&nbsp;it&#39;s&nbsp;a&nbsp;design&nbsp;decision&nbsp;made&nbsp;at&nbsp;the&nbsp;planning&nbsp;stage.</p><h2>Trust&nbsp;Signals&nbsp;Work</h2><p>Real&nbsp;client&nbsp;logos,&nbsp;real&nbsp;testimonials&nbsp;with&nbsp;real&nbsp;names,&nbsp;real&nbsp;photos&nbsp;of&nbsp;your&nbsp;team.&nbsp;Authenticity&nbsp;converts&nbsp;better&nbsp;than&nbsp;polish.</p>",
+      "coverImage": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+      "publishedAt": "2026-04-20T00:00:00.000Z",
+      "published": true,
+      "tags": [
+        "web design",
+        "conversion",
+        "ux"
+      ],
+      "readTime": "5",
+      "metaTitle": "",
+      "metaDesc": ""
+    }
+  ],
   "_meta": {
-    "lastModified": "2026-05-09T17:05:17.236Z",
+    "lastModified": "2026-05-09T18:40:28.497Z",
     "lastModifiedBy": "admin"
   }
 }

@@ -11,7 +11,7 @@ const navLinks = [
     { label: "About us", href: "#about" },
     { label: "Work", href: "/Project" },
     { label: "Product & Service", href: "#", hasMega: true },
-    { label: "Team", href: "#" },
+    { label: "Blogs", href: "/Blogs" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -139,117 +139,117 @@ function MegaMenu({ visible, onMouseEnter, onMouseLeave }) {
         >
             <div className="max-w-7xl mx-auto px-6">
                 {/* ── TOP: Produk Kara ── */}
-            <div className="p-6 pb-5">
-                <p className="text-[10px] font-semibold tracking-widest uppercase text-gray-400 mb-4">
-                    Produk
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                    {karaProducts.map((product) => (
-                    product.disabled ? (
-                        <div
-                            key={product.name}
-                            className="group flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50 text-gray-400 cursor-not-allowed opacity-70"
-                            aria-disabled="true"
-                        >
-                            {/* Gradient icon box */}
-                            <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-white shadow-sm`}>
-                                {product.icon}
-                            </div>
-                            <div className="min-w-0">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <p className="text-sm font-semibold text-gray-900 leading-snug">
-                                        {product.name}
-                                    </p>
-                                    <span className="text-[9px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
-                                        {product.badge}
-                                    </span>
+                <div className="p-6 pb-5">
+                    <p className="text-[10px] font-semibold tracking-widest uppercase text-gray-400 mb-4">
+                        Produk
+                    </p>
+                    <div className="grid grid-cols-2 gap-3">
+                        {karaProducts.map((product) => (
+                            product.disabled ? (
+                                <div
+                                    key={product.name}
+                                    className="group flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50 text-gray-400 cursor-not-allowed opacity-70"
+                                    aria-disabled="true"
+                                >
+                                    {/* Gradient icon box */}
+                                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-white shadow-sm`}>
+                                        {product.icon}
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <p className="text-sm font-semibold text-gray-900 leading-snug">
+                                                {product.name}
+                                            </p>
+                                            <span className="text-[9px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                                {product.badge}
+                                            </span>
+                                        </div>
+                                        <p className="text-xs text-gray-500 leading-snug">
+                                            {product.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="text-xs text-gray-500 leading-snug">
-                                    {product.desc}
-                                </p>
-                            </div>
-                        </div>
-                    ) : (
-                        <Link
-                            key={product.name}
-                            href={product.href}
-                            className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-gray-100 hover:border-gray-200 transition-all duration-200"
-                        >
-                            {/* Gradient icon box */}
-                            <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-white shadow-sm`}>
-                                {product.icon}
-                            </div>
-                            <div className="min-w-0">
-                                <div className="flex items-center gap-2 mb-1">
-                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-black leading-snug">
-                                        {product.name}
-                                    </p>
-                                    <span className="text-[9px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
-                                        {product.badge}
-                                    </span>
+                            ) : (
+                                <Link
+                                    key={product.name}
+                                    href={product.href}
+                                    className="group flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 border border-gray-100 hover:border-gray-200 transition-all duration-200"
+                                >
+                                    {/* Gradient icon box */}
+                                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-white shadow-sm`}>
+                                        {product.icon}
+                                    </div>
+                                    <div className="min-w-0">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <p className="text-sm font-semibold text-gray-900 group-hover:text-black leading-snug">
+                                                {product.name}
+                                            </p>
+                                            <span className="text-[9px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                                {product.badge}
+                                            </span>
+                                        </div>
+                                        <p className="text-xs text-gray-500 leading-snug">
+                                            {product.desc}
+                                        </p>
+                                        <span className="inline-flex items-center gap-1 mt-2 text-[11px] font-medium text-gray-400 group-hover:text-gray-700 transition-colors duration-150">
+                                            Pelajari lebih lanjut
+                                            <svg className="w-2.5 h-2.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </Link>
+                            )
+                        ))}
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <div className="h-px bg-gray-100 mx-6" />
+
+                {/* ── BOTTOM: Layanan ── */}
+                <div className="p-6 pt-5">
+                    <p className="text-[10px] font-semibold tracking-widest uppercase text-gray-400 mb-4">
+                        Layanan
+                    </p>
+
+                    {/* 3-column service grid */}
+                    <div className="grid grid-cols-3 gap-1">
+                        {karaServices.map((service) => (
+                            <Link
+                                key={service.name}
+                                href={service.href}
+                                className="group flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-150"
+                            >
+                                <div className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${service.bg} ${service.color} mt-0.5`}>
+                                    {service.icon}
                                 </div>
-                                <p className="text-xs text-gray-500 leading-snug">
-                                    {product.desc}
-                                </p>
-                                <span className="inline-flex items-center gap-1 mt-2 text-[11px] font-medium text-gray-400 group-hover:text-gray-700 transition-colors duration-150">
-                                    Pelajari lebih lanjut
-                                    <svg className="w-2.5 h-2.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </Link>
-                    )
-                ))}
-                </div>
-            </div>
+                                <div>
+                                    <p className="text-xs font-medium text-gray-900 group-hover:text-black leading-snug">
+                                        {service.name}
+                                    </p>
+                                    <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
+                                        {service.desc}
+                                    </p>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
 
-            {/* Divider */}
-            <div className="h-px bg-gray-100 mx-6" />
-
-            {/* ── BOTTOM: Layanan ── */}
-            <div className="p-6 pt-5">
-                <p className="text-[10px] font-semibold tracking-widest uppercase text-gray-400 mb-4">
-                    Layanan
-                </p>
-
-                {/* 3-column service grid */}
-                <div className="grid grid-cols-3 gap-1">
-                    {karaServices.map((service) => (
+                    {/* Footer CTA */}
+                    <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                        <p className="text-[11px] text-gray-400">Butuh sesuatu yang custom?</p>
                         <Link
-                            key={service.name}
-                            href={service.href}
-                            className="group flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-gray-50 transition-colors duration-150"
+                            href="#contact"
+                            className="inline-flex items-center gap-1 text-xs font-medium text-gray-900 hover:text-black group"
                         >
-                            <div className={`flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center ${service.bg} ${service.color} mt-0.5`}>
-                                {service.icon}
-                            </div>
-                            <div>
-                                <p className="text-xs font-medium text-gray-900 group-hover:text-black leading-snug">
-                                    {service.name}
-                                </p>
-                                <p className="text-[11px] text-gray-500 leading-snug mt-0.5">
-                                    {service.desc}
-                                </p>
-                            </div>
+                            Hubungi kami
+                            <svg className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
                         </Link>
-                    ))}
+                    </div>
                 </div>
-
-                {/* Footer CTA */}
-                <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
-                    <p className="text-[11px] text-gray-400">Butuh sesuatu yang custom?</p>
-                    <Link
-                        href="#contact"
-                        className="inline-flex items-center gap-1 text-xs font-medium text-gray-900 hover:text-black group"
-                    >
-                        Hubungi kami
-                        <svg className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
-                </div>
-            </div>
             </div>
         </div>
     );
@@ -355,10 +355,10 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop Mega Menu Overlay */}
-            <MegaMenu 
-                visible={megaOpen} 
-                onMouseEnter={handleMouseEnter} 
-                onMouseLeave={handleMouseLeave} 
+            <MegaMenu
+                visible={megaOpen}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             />
 
             {/* Mobile Backdrop */}
