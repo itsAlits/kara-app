@@ -9,7 +9,6 @@ const playfair = Playfair_Display({
   weight: ["400"],
 });
 
-/* ---------- tiny avatar data ---------- */
 const avatars = [
   { id: 1, bg: "#c084fc", letter: "A" },
   { id: 2, bg: "#60a5fa", letter: "M" },
@@ -17,7 +16,6 @@ const avatars = [
   { id: 4, bg: "#fb923c", letter: "S" },
 ];
 
-/* ---------- star SVG ---------- */
 function Star({ filled }) {
   return (
     <svg
@@ -30,47 +28,55 @@ function Star({ filled }) {
   );
 }
 
-export default function Landing() {
+export default function Landing({ content = {} }) {
+  const {
+    badge = "Now available for new projects",
+    badgeYear = "2026",
+    headline = "Turn visitors into customers",
+    headlineItalic = "thoughtful design",
+    subheadline = "We partner with ambitious brands to build stunning products — from bold identity systems to pixel-perfect interfaces.",
+    ctaPrimary = "Get Started",
+    ctaSecondary = "View our work",
+    socialProofLabel = "Trusted by",
+    socialProofBrand = "Big Brands",
+    socialProofLocation = "in Bali",
+  } = content;
+
   return (
     <section
       id="home"
       className="relative min-h-[calc(100vh-57px)] mt-20 flex items-center justify-center bg-white overflow-hidden"
     >
-
       {/* ── Floating pill badge ── */}
       <div className="absolute top-6 sm:top-10 left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-1.5 sm:gap-2 bg-white border border-gray-100 shadow-sm rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[12px] sm:text-xs font-medium text-gray-600 animate-[fadeSlideDown_0.7s_ease_both] z-10">
         <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-        Now available for new projects
+        {badge}
         <span className="text-gray-300">·</span>
-        <span className="text-indigo-500 font-semibold">2026</span>
+        <span className="text-indigo-500 font-semibold">{badgeYear}</span>
       </div>
 
       {/* ── Main content ── */}
       <div className="relative z-10 mt-8 lg:mt-0 flex flex-col items-center text-center px-5 sm:px-8 max-w-6xl mx-auto pt-16 pb-24 sm:pt-20 sm:pb-20 w-full">
-
         {/* headline */}
         <h1 className="text-[2.2rem] leading-[1.15] sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-gray-900 mb-5 sm:mb-6 animate-[fadeSlideUp_0.8s_ease_both]">
-          Turn visitors into customers{" "}
+          {headline}{" "}
           <span className="hidden sm:inline"><br /></span>
           with{" "}
           <em
             className="italic font-light"
             style={{ fontFamily: playfair.style.fontFamily }}
           >
-            thoughtful design
+            {headlineItalic}
           </em>
         </h1>
 
         {/* sub-headline */}
         <p className="max-w-xs sm:max-w-xl text-sm sm:text-base lg:text-lg text-gray-500 leading-relaxed mb-8 sm:mb-10 animate-[fadeSlideUp_0.9s_ease_both]">
-          We partner with ambitious brands to build stunning products — from
-          bold identity systems to pixel-perfect interfaces.
+          {subheadline}
         </p>
 
         {/* CTA row */}
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto animate-[fadeSlideUp_1s_ease_both]">
-
-          {/* primary button */}
           <Link
             href="#contact"
             id="hero-cta-primary"
@@ -81,7 +87,7 @@ export default function Landing() {
               className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"
               style={{ background: "linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)" }}
             />
-            Get Started
+            {ctaPrimary}
             <span className="w-7 h-7 bg-white text-gray-900 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:-rotate-45 shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -89,7 +95,6 @@ export default function Landing() {
             </span>
           </Link>
 
-          {/* secondary button */}
           <Link
             href="#work"
             id="hero-cta-secondary"
@@ -101,14 +106,12 @@ export default function Landing() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </span>
-            View our work
+            {ctaSecondary}
           </Link>
         </div>
 
         {/* social proof */}
         <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center gap-3 sm:gap-6 animate-[fadeSlideUp_1.1s_ease_both]">
-
-          {/* avatar stack */}
           <div className="flex -space-x-2.5">
             {avatars.map((av) => (
               <div
@@ -120,22 +123,17 @@ export default function Landing() {
               </div>
             ))}
           </div>
-
-          {/* divider — desktop only */}
           <div className="hidden sm:block w-px h-8 bg-gray-200" />
-
-          {/* stars + label */}
           <div className="flex flex-col items-center sm:items-start gap-0.5">
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((i) => <Star key={i} filled />)}
             </div>
             <p className="text-xs text-gray-500 mt-3 lg:mt-1">
-              Trusted by <span className="font-semibold text-gray-800">Big Brands</span> in Bali
+              {socialProofLabel} <span className="font-semibold text-gray-800">{socialProofBrand}</span> {socialProofLocation}
             </p>
           </div>
         </div>
       </div>
-
 
       {/* ── keyframes ── */}
       <style>{`

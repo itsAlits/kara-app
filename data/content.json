@@ -1,0 +1,171 @@
+{
+  "hero": {
+    "badge": "Now available for new projects",
+    "badgeYear": "2026",
+    "headline": "Turn visitors into customers",
+    "headlineItalic": "thoughtful design",
+    "subheadline": "We partner with ambitious brands to build stunning products — from bold identity systems to pixel-perfect interfaces.",
+    "ctaPrimary": "Get Started Now",
+    "ctaSecondary": "View our work",
+    "socialProofLabel": "Trusted by",
+    "socialProofBrand": "Big Brands",
+    "socialProofLocation": "in Bali"
+  },
+  "clients": {
+    "label": "Trusted by growing brands — and still counting",
+    "logos": [
+      {
+        "src": "/Group 9 1.png",
+        "alt": "Client logo 1"
+      },
+      {
+        "src": "/Group 10 1.png",
+        "alt": "Client logo 2"
+      },
+      {
+        "src": "/image 4.png",
+        "alt": "Client logo 3"
+      },
+      {
+        "src": "/logo2 1.png",
+        "alt": "Client logo 4"
+      }
+    ]
+  },
+  "quote": "We are a digital agency that helps brands connect with their audience. Craft digital experiences that are human.",
+  "projects": [
+    {
+      "id": "01",
+      "title": "Zen Ubud Photography",
+      "category": "Photography",
+      "desc": "Get a photo product for menu project.",
+      "image": "/uploads/slide-16-9---1-1778345969533.png",
+      "fullDesc": "A curated food & menu photography project for a Ubud restaurant. Every dish was styled and captured to highlight textures, colors and the artisan quality of the cuisine — ready for print and digital menus.",
+      "client": "Zen Restaurant Ubud",
+      "year": "2024",
+      "services": [
+        "Photography",
+        "Food Styling",
+        "Post-Production"
+      ],
+      "technologies": [
+        "Canon EOS R5",
+        "Adobe Lightroom",
+        "Photoshop"
+      ],
+      "gallery": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
+      ]
+    },
+    {
+      "id": "02",
+      "title": "SaaS Dashboard",
+      "category": "Website",
+      "desc": "Clean analytics platform built with Next.js.",
+      "image": "https://cdn.dribbble.com/userupload/18414413/file/original-2bb272fa0eabf80981be1e8571957e6c.png?resize=1024x768&vertical=center",
+      "fullDesc": "A comprehensive analytics dashboard for SaaS companies, built with modern web technologies. The platform provides real-time data visualization, user management, and advanced reporting features. Designed with a focus on usability and performance.",
+      "client": "TechAnalytics Inc.",
+      "year": "2024",
+      "services": [
+        "UI/UX Design",
+        "Frontend Development",
+        "Backend Integration"
+      ],
+      "technologies": [
+        "Next.js",
+        "React",
+        "Tailwind CSS"
+      ],
+      "gallery": [
+        "https://cdn.dribbble.com/userupload/18414413/file/original-2bb272fa0eabf80981be1e8571957e6c.png?resize=1024x768&vertical=center",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Logo & Brand Identity",
+      "category": "Design",
+      "desc": "Outdoor shoot for a sportswear brand.",
+      "image": "https://cdn.dribbble.com/userupload/7466945/file/original-ad413804645c4b0ff8c7b5e3696e3f79.jpg?resize=1024x768&vertical=center",
+      "fullDesc": "Full brand identity system covering logo design, colour palette, typography, and brand guidelines. The result is a cohesive visual language that communicates quality and authenticity across every touchpoint.",
+      "client": "Local Bali Brand",
+      "year": "2024",
+      "services": [
+        "Logo Design",
+        "Brand Guidelines",
+        "Typography"
+      ],
+      "technologies": [
+        "Figma",
+        "Adobe Illustrator",
+        "Adobe InDesign"
+      ],
+      "gallery": [
+        "https://cdn.dribbble.com/userupload/7466945/file/original-ad413804645c4b0ff8c7b5e3696e3f79.jpg?resize=1024x768&vertical=center",
+        "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800",
+        "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800"
+      ]
+    }
+  ],
+  "about": {
+    "eyebrow": "About Kara",
+    "heading": "A creative agency built to make your brand look premium, clear, and unforgettable.",
+    "body": "Kara blends photography, digital experiences, advertising, and social media management into cohesive brand work that feels modern, intentional, and easy to scale.",
+    "focusTitle": "Our focus",
+    "focusText": "We help brands stand out with striking visual storytelling, performance-led websites, and campaigns designed to grow awareness and engagement.",
+    "approachTitle": "Our approach",
+    "approachText": "Every project begins with strategy, then moves into refined design and execution so your brand experience is consistent across every channel."
+  },
+  "testimonials": {
+    "eyebrow": "Customer stories",
+    "heading": "What our satisfied customers are saying",
+    "subheading": "Clear, confident feedback from brands who trust our strategy, design, and delivery.",
+    "stat": {
+      "value": "91%",
+      "label": "Clients recommend our design services for clarity, quality, and measurable results."
+    },
+    "items": [
+      {
+        "id": "t1",
+        "quote": "Kara expertise transformed our vision into success with creativity, precision.",
+        "body": "We partnered on a premium digital experience built to reflect the brand's values. Every design choice was intentional and aligned with business goals.",
+        "author": "Tole",
+        "role": "Founder of Sumiartha Furniture",
+        "variant": "dark-large"
+      },
+      {
+        "id": "t2",
+        "quote": "Their attention to detail transformed our brand completely.",
+        "body": "The process was seamless, thoughtful, and focused on delivering a refined brand experience.",
+        "author": "Dida",
+        "role": "Head Legal of Ubud Law Office",
+        "variant": "light-small"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Building brands that move people.",
+    "copyright": "© 2028 Kara. All rights reserved.",
+    "links": [
+      {
+        "label": "Home",
+        "href": "#home"
+      }
+    ],
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "label": "Twitter",
+        "href": "#"
+      }
+    ]
+  },
+  "_meta": {
+    "lastModified": "2026-05-09T17:05:17.236Z",
+    "lastModifiedBy": "admin"
+  }
+}
