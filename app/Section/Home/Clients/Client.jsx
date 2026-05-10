@@ -37,7 +37,7 @@ export default function Clients({ content }) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={logo.src}
-                  alt={logo.alt}
+                  alt={logo.alt || "Client Logo"}
                   className="h-8 sm:h-10 w-auto object-contain"
                 />
               </div>
