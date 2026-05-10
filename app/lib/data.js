@@ -1,31 +1,35 @@
-import 'server-only';
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
-import { cache } from 'react';
+﻿import 'server-only';
+import { connectDB } from './mongodb';
+import { ContentModel } from './ContentModel';
 
-const DATA_PATH = path.join(process.cwd(), 'data', 'content.json');
-
-// Cache per-request so we don't read the file multiple times per render
-export const getContent = cache(async () => {
+/**
+ * Get all content sections merged into one flat object.
+ * Same shape as old content.json so all components keep working.
+ */
+export async function getContent() {
   try {
-    const raw = await readFile(DATA_PATH, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
+    await connectDB();
+    const docs = await ContentModel.find({}).lean();
+    const result = {};
+    for (const doc of docs) {
+      result[doc.section] = doc.data;
+    }
+    return result;
+  } catch (err) {
+    console.error('[getContent] MongoDB error:', err);
     return {};
   }
-});
+}
 
-// Write updated section back to file
+/**
+ * Upsert a single section in MongoDB.
+ */
 export async function updateContent(section, data) {
-  const current = await readFile(DATA_PATH, 'utf-8').then(JSON.parse);
-  const updated = {
-    ...current,
-    [section]: data,
-    _meta: {
-      lastModified: new Date().toISOString(),
-      lastModifiedBy: 'admin',
-    },
-  };
-  await writeFile(DATA_PATH, JSON.stringify(updated, null, 2), 'utf-8');
-  return updated;
+  await connectDB();
+  await ContentModel.findOneAndUpdate(
+    { section },
+    { $set: { data } },
+    { upsert: true, returnDocument: 'after' }
+  );
+  return { _meta: { lastModified: new Date().toISOString(), lastModifiedBy: 'admin' } };
 }
