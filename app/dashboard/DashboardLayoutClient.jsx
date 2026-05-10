@@ -124,7 +124,7 @@ function Sidebar({ collapsed, onToggle, onClose, mobile }) {
   async function handleLogout() {
     setLoggingOut(true);
     await fetch("/api/auth/logout", { method: "POST" });
-    router.push("/login");
+    router.push("/kara-admin");
     router.refresh();
   }
 
@@ -197,11 +197,10 @@ function Sidebar({ collapsed, onToggle, onClose, mobile }) {
                   target={item.external ? "_blank" : undefined}
                   onClick={mobile ? onClose : undefined}
                   title={collapsed ? item.label : undefined}
-                  className={`flex items-center gap-3 mx-2 px-2.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 group relative ${
-                    active
-                      ? "bg-indigo-600/15 text-indigo-400"
-                      : "text-slate-400 hover:text-white hover:bg-white/[0.05]"
-                  }`}
+                  className={`flex items-center gap-3 mx-2 px-2.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 group relative ${collapsed ? "justify-center px-0" : ""} ${active
+                    ? "bg-indigo-600/15 text-indigo-400"
+                    : "text-slate-400 hover:text-white hover:bg-white/[0.05]"
+                    }`}
                 >
                   <span className={`shrink-0 transition-colors ${active ? "text-indigo-400" : "text-slate-500 group-hover:text-slate-300"}`}>
                     {item.icon}

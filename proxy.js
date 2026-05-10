@@ -10,13 +10,13 @@ export async function proxy(request) {
   // Protect dashboard routes
   if (pathname.startsWith('/dashboard')) {
     if (!isAuthenticated) {
-      return NextResponse.redirect(new URL('/login', request.url));
+      return NextResponse.redirect(new URL('/kara-admin', request.url));
     }
     return NextResponse.next();
   }
 
   // Redirect logged-in users away from login page
-  if (pathname === '/login' && isAuthenticated) {
+  if (pathname === '/kara-admin' && isAuthenticated) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
@@ -24,5 +24,5 @@ export async function proxy(request) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/login'],
+  matcher: ['/dashboard/:path*', '/kara-admin'],
 };

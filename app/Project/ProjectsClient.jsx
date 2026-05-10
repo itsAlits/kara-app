@@ -40,12 +40,17 @@ function ProjectCard({ project }) {
             )}
           </div>
 
-          {/* Bottom */}
-          <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          {/* Bottom content */}
+          <div>
+            {/* Title — always visible */}
             <h3 className="text-white text-xl font-normal leading-tight">{project.title}</h3>
-            <p className="text-white/80 leading-relaxed text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 mt-1">
+
+            {/* Description — expands in on hover */}
+            <p className="text-white/80 leading-relaxed text-xs max-h-0 overflow-hidden opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-500 delay-100 mt-0 group-hover:mt-2">
               {project.desc}
             </p>
+
+            {/* Meta row */}
             <div className="flex mt-3 items-center justify-between">
               {project.client && (
                 <span className="text-white/60 text-xs">{project.client}</span>

@@ -10,7 +10,7 @@ export const metadata = {
 export default async function DashboardLayout({ children }) {
   const session = await getSession();
   if (!session) {
-    redirect("/login");
+    redirect("/kara-admin");
   }
 
   return <DashboardLayoutClient>{children}</DashboardLayoutClient>;
