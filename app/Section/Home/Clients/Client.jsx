@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 export default function Clients({ content = {} }) {
   const { label = "Trusted by growing brands — and counting", logos = [] } = content;
@@ -32,11 +31,10 @@ export default function Clients({ content = {} }) {
                 key={i}
                 className="flex items-center justify-center shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
               >
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={logo.src}
                   alt={logo.alt}
-                  width={120}
-                  height={40}
                   className="h-8 sm:h-10 w-auto object-contain"
                 />
               </div>
