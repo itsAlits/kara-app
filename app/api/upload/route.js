@@ -1,7 +1,15 @@
 import { NextResponse } from 'next/server';
 import { getSession } from '@/app/lib/session';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
+import { v2 as cloudinary } from 'cloudinary';
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif'];
+const MAX_SIZE = 5 * 1024 * 1024; // 5 MB
 
 export async function POST(request) {
   const session = await getSession();
@@ -17,34 +25,30 @@ export async function POST(request) {
       return NextResponse.json({ error: 'No file provided' }, { status: 400 });
     }
 
-    // Validate file type
-    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif'];
-    if (!allowedTypes.includes(file.type)) {
-      return NextResponse.json({ error: 'Invalid file type. Use JPEG, PNG, WebP or GIF.' }, { status: 400 });
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      return NextResponse.json(
+        { error: 'Invalid file type. Use JPEG, PNG, WebP or GIF.' },
+        { status: 400 }
+      );
     }
 
-    // Validate file size (max 5MB)
-    if (file.size > 5 * 1024 * 1024) {
+    if (file.size > MAX_SIZE) {
       return NextResponse.json({ error: 'File too large. Max 5MB.' }, { status: 400 });
     }
 
+    // Convert to base64 data URI for Cloudinary
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
+    const dataUri = `data:${file.type};base64,${buffer.toString('base64')}`;
 
-    // Sanitize filename and add timestamp to prevent collisions
-    const ext = path.extname(file.name).toLowerCase();
-    const baseName = path.basename(file.name, ext)
-      .replace(/[^a-z0-9]/gi, '-')
-      .toLowerCase();
-    const fileName = `${baseName}-${Date.now()}${ext}`;
+    const result = await cloudinary.uploader.upload(dataUri, {
+      folder: 'kara-app',
+      resource_type: 'image',
+    });
 
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-    await mkdir(uploadDir, { recursive: true });
-    await writeFile(path.join(uploadDir, fileName), buffer);
-
-    return NextResponse.json({ ok: true, url: `/uploads/${fileName}` });
+    return NextResponse.json({ ok: true, url: result.secure_url });
   } catch (err) {
-    console.error('Upload error:', err);
+    console.error('[upload] error:', err);
     return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
   }
 }
