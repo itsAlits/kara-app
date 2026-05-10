@@ -10,7 +10,7 @@ const navLinks = [
     { label: "Home", href: "/" },
     { label: "About us", href: "#about" },
     { label: "Work", href: "/Project" },
-    { label: "Product & Service", href: "#", hasMega: true },
+    { label: "Product & Service", href: "/services", hasMega: true },
     { label: "Blogs", href: "/Blogs" },
 ];
 
@@ -28,7 +28,7 @@ const karaProducts = [
             </svg>
         ),
         gradient: "from-violet-500 to-indigo-600",
-        href: "#",
+        href: "/services",
     },
     {
         name: "Kara Clinic",
@@ -40,7 +40,7 @@ const karaProducts = [
             </svg>
         ),
         gradient: "from-emerald-500 to-teal-600",
-        href: "#",
+        href: "/services",
         disabled: true,
     },
 ];
@@ -59,7 +59,7 @@ const karaServices = [
         ),
         color: "text-violet-600",
         bg: "bg-violet-50",
-        href: "#",
+        href: "/services",
     },
     {
         name: "Web Development",
@@ -71,7 +71,7 @@ const karaServices = [
         ),
         color: "text-blue-600",
         bg: "bg-blue-50",
-        href: "#",
+        href: "/services",
     },
     {
         name: "UI/UX Design",
@@ -83,7 +83,7 @@ const karaServices = [
         ),
         color: "text-pink-600",
         bg: "bg-pink-50",
-        href: "#",
+        href: "/services",
     },
     {
         name: "Photography",
@@ -96,7 +96,7 @@ const karaServices = [
         ),
         color: "text-amber-600",
         bg: "bg-amber-50",
-        href: "#",
+        href: "/services",
     },
     {
         name: "Digital Ads",
@@ -108,7 +108,7 @@ const karaServices = [
         ),
         color: "text-green-600",
         bg: "bg-green-50",
-        href: "#",
+        href: "/services",
     },
     {
         name: "Social Media Management",
@@ -120,7 +120,7 @@ const karaServices = [
         ),
         color: "text-red-600",
         bg: "bg-red-50",
-        href: "#",
+        href: "/services",
     },
 ];
 
