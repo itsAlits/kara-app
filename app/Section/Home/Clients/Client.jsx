@@ -1,6 +1,9 @@
 
-export default function Clients({ content = {} }) {
-  const { label = "Trusted by growing brands — and counting", logos = [] } = content;
+export default function Clients({ content }) {
+  const {
+    label = "Trusted by growing brands \u2014 and counting",
+    logos = [],
+  } = content ?? {};
 
   const track = [...logos, ...logos, ...logos];
 

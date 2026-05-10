@@ -8,7 +8,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif'];
+const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif', 'image/svg+xml'];
 const MAX_SIZE = 5 * 1024 * 1024; // 5 MB
 
 export async function POST(request) {
@@ -27,7 +27,7 @@ export async function POST(request) {
 
     if (!ALLOWED_TYPES.includes(file.type)) {
       return NextResponse.json(
-        { error: 'Invalid file type. Use JPEG, PNG, WebP or GIF.' },
+        { error: 'Invalid file type. Use JPEG, PNG, WebP, GIF, or SVG.' },
         { status: 400 }
       );
     }
@@ -41,9 +41,10 @@ export async function POST(request) {
     const buffer = Buffer.from(bytes);
     const dataUri = `data:${file.type};base64,${buffer.toString('base64')}`;
 
+    // Use resource_type 'auto' so Cloudinary handles both raster images AND SVG correctly
     const result = await cloudinary.uploader.upload(dataUri, {
       folder: 'kara-app',
-      resource_type: 'image',
+      resource_type: 'auto',
     });
 
     return NextResponse.json({ ok: true, url: result.secure_url });
